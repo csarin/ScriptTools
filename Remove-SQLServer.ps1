@@ -112,9 +112,9 @@ foreach ($p in $paths) {
     if (Test-Path $p) {
         try {
             Remove-Item -Path $p -Recurse -Force -ErrorAction Stop
-            Write-Host "  • Eliminado $p"
+            Write-Host "  • Deleted $p"
         } catch {
-            Write-Warning "  ! No se pudo eliminar ${p}: $_"
+            Write-Warning "  ! Could not be eliminated ${p}: $_"
         }
     }
 } 
